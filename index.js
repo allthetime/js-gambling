@@ -6,9 +6,9 @@ var max = 11
 var Game = function(name){
   this.name = name
   this.purse = 100
-  this.bet = null;
-  this.guess = null;
-  this.answer = null;
+  // this.bet = null;
+  // this.guess = null;
+  // this.answer = null;
 }
 
 Game.prototype = {
@@ -20,7 +20,7 @@ Game.prototype = {
       this.answer = Math.floor(Math.random() * (max - min)) + min;
       this.bet = parseInt(bet);
       this.guess = guess;
-      this.updateBank(-this.bet)
+      this.updateBank(-this.bet);
       this.checkAnswer();
     }
   },
